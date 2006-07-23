@@ -53,6 +53,8 @@ Statyczna biblioteka f2c.
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -fPIC"
 
+ar crs libf2cmain.a main.o getarg_.o iargc_.o
+rm -f main.o getarg_.o iargc_.o
 %{__cc} -shared -o libf2c.so.0.23 *.o -Wl,-soname=libf2c.so.0 -lm
 rm -f libf2c.a *.o
 
@@ -66,7 +68,7 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 
 install libf2c.so.0.23 $RPM_BUILD_ROOT%{_libdir}
 ln -sf libf2c.so.0.23 $RPM_BUILD_ROOT%{_libdir}/libf2c.so
-install libf2c.a $RPM_BUILD_ROOT%{_libdir}
+install libf2c.a libf2cmain.a $RPM_BUILD_ROOT%{_libdir}
 install f2c.h $RPM_BUILD_ROOT%{_includedir}
  
 %clean
@@ -83,6 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libf2c.so
+%{_libdir}/libf2cmain.a
 %{_includedir}/f2c.h
 
 %files static
