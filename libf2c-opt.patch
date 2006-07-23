@@ -1,0 +1,15 @@
+--- libf2c/makefile.u.orig	2003-06-06 15:09:42.000000000 +0200
++++ libf2c/makefile.u	2006-07-23 20:36:43.243357750 +0200
+@@ -86,12 +86,6 @@
+ 
+ ### If your system lacks ranlib, you don't need it; see README.
+ 
+-f77vers.o: f77vers.c
+-	$(CC) -c f77vers.c
+-
+-i77vers.o: i77vers.c
+-	$(CC) -c i77vers.c
+-
+ # To get an "f2c.h" for use with "f2c -C++", first "make hadd"
+ hadd: f2c.h0 f2ch.add
+ 	cat f2c.h0 f2ch.add >f2c.h
