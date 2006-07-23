@@ -1,0 +1,43 @@
+--- libf2c/f2c.h0.orig	1999-09-07 13:46:24.000000000 +0200
++++ libf2c/f2c.h0	2006-07-23 20:33:35.011594000 +0200
+@@ -7,6 +7,20 @@
+ #ifndef F2C_INCLUDE
+ #define F2C_INCLUDE
+ 
++#if defined(__alpha__) || defined(_LP64)
++typedef int integer;
++typedef unsigned int uinteger;
++typedef char *address;
++typedef short int shortint;
++typedef float real;
++typedef double doublereal;
++typedef struct { real r, i; } complex;
++typedef struct { doublereal r, i; } doublecomplex;
++typedef int logical;
++typedef short int shortlogical;
++typedef char logical1;
++typedef char integer1;
++#else
+ typedef long int integer;
+ typedef unsigned long int uinteger;
+ typedef char *address;
+@@ -19,6 +33,8 @@
+ typedef short int shortlogical;
+ typedef char logical1;
+ typedef char integer1;
++#endif
++
+ #ifdef INTEGER_STAR_8	/* Adjust for integer*8. */
+ typedef long long longint;		/* system-dependent */
+ typedef unsigned long long ulongint;	/* system-dependent */
+@@ -41,6 +57,10 @@
+ typedef short flag;
+ typedef short ftnlen;
+ typedef short ftnint;
++#elif defined(__alpha__) || defined(_LP64)
++typedef int flag;
++typedef int ftnlen;
++typedef int ftnint;
+ #else
+ typedef long int flag;
+ typedef long int ftnlen;
