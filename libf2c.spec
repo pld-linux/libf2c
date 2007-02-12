@@ -1,5 +1,5 @@
 Summary:	The f2c Fortran to C conversion library
-Summary(pl):	Biblioteka f2c do t≥umaczenia z Fortranu na C
+Summary(pl.UTF-8):   Biblioteka f2c do t≈Çumaczenia z Fortranu na C
 Name:		libf2c
 Version:	20051005
 Release:	1
@@ -16,31 +16,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The f2c Fortran to C conversion library.
 
-%description -l pl
-Biblioteka f2c do t≥umaczenia z Fortranu na C.
+%description -l pl.UTF-8
+Biblioteka f2c do t≈Çumaczenia z Fortranu na C.
 
 %package devel
 Summary:	Header file for f2c library
-Summary(pl):	Plik nag≥Ûwkowy biblioteki f2c
+Summary(pl.UTF-8):   Plik nag≈Ç√≥wkowy biblioteki f2c
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header file for f2c library.
 
-%description devel -l pl
-Plik nag≥Ûwkowy biblioteki f2c.
+%description devel -l pl.UTF-8
+Plik nag≈Ç√≥wkowy biblioteki f2c.
 
 %package static
 Summary:	Static f2c library
-Summary(pl):	Statyczna biblioteka f2c
+Summary(pl.UTF-8):   Statyczna biblioteka f2c
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static f2c library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka f2c.
 
 %prep
