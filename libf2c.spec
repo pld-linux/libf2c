@@ -11,7 +11,6 @@ Patch0:		%{name}-LP64.patch
 Patch1:		%{name}-opt.patch
 URL:		ftp://ftp.netlib.org/f2c/
 BuildRequires:	unzip
-Obsoletes:	f2c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
