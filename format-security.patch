@@ -1,0 +1,11 @@
+--- libf2c-20110801/arithchk.c~	2011-01-27 16:24:09.000000000 +0000
++++ libf2c-20110801/arithchk.c	2015-04-05 17:33:07.396796153 +0000
+@@ -122,7 +122,7 @@
+ 	long Cray1;
+ 
+ 	/* Cray1 = 4617762693716115456 -- without overflow on non-Crays */
+-	Cray1 = printf(emptyfmt) < 0 ? 0 : 4617762;
++	Cray1 = printf("%s", emptyfmt) < 0 ? 0 : 4617762;
+ 	if (printf(emptyfmt, Cray1) >= 0)
+ 		Cray1 = 1000000*Cray1 + 693716;
+ 	if (printf(emptyfmt, Cray1) >= 0)
