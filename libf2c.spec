@@ -5,11 +5,11 @@ Version:	20240131
 Release:	1
 License:	distributable
 Group:		Libraries
-Source0:	http://www.netlib.org/f2c/libf2c.zip
+Source0:	https://www.netlib.org/f2c/libf2c.zip
 # Source0-md5:	651b3d9cbfc9ae659166332785ac3b6e
 Patch0:		%{name}-LP64.patch
 Patch1:		%{name}-nomacros.patch
-URL:		http://www.netlib.org/f2c/
+URL:		https://www.netlib.org/f2c/
 BuildRequires:	unzip
 Conflicts:	f2c < 20031027-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
