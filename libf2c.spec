@@ -83,12 +83,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Notice README
-%attr(755,root,root) %{_libdir}/libf2c.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/libf2c.so.0
+%{_libdir}/libf2c.so.*.*
+%ghost %{_libdir}/libf2c.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libf2c.so
+%{_libdir}/libf2c.so
 %{_libdir}/libf2cmain.a
 %{_includedir}/f2c.h
 
