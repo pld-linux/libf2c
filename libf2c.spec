@@ -1,16 +1,14 @@
 Summary:	Fortran to C conversion support library
 Summary(pl.UTF-8):	Biblioteka wspierająca tłumaczenie z Fortranu na C
 Name:		libf2c
-Version:	20110801
-Release:	2
+Version:	20240131
+Release:	1
 License:	distributable
 Group:		Libraries
 Source0:	http://www.netlib.org/f2c/libf2c.zip
-# Source0-md5:	dc6ae2b9b33347feb8bdcc3c3def8b9f
+# Source0-md5:	651b3d9cbfc9ae659166332785ac3b6e
 Patch0:		%{name}-LP64.patch
-Patch1:		%{name}-opt.patch
-Patch2:		%{name}-nomacros.patch
-Patch3:		format-security.patch
+Patch1:		%{name}-nomacros.patch
 URL:		http://www.netlib.org/f2c/
 BuildRequires:	unzip
 Conflicts:	f2c < 20031027-2
@@ -51,8 +49,6 @@ Statyczna biblioteka f2c.
 %setup -q -c
 %patch -P0 -p1
 %patch -P1 -p1
-%patch -P2 -p1
-%patch -P3 -p1
 
 %build
 %{__make} -f makefile.u \
